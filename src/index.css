@@ -1,0 +1,109 @@
+body {
+    font: 14px "Century Gothic", Futura, sans-serif;
+    margin: 20px;
+}
+
+.othello {
+    text-align: center;
+}
+
+.othello-board {
+    display: inline-block;
+    border-right: 2px solid #555;
+    border-bottom: 1px solid #555;
+}
+
+.othello-info {
+    margin-top: 20px;
+}
+
+.tile {
+    background: rgb(0, 219, 135);
+    border: 2px inset #999;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+    height: 60px;
+    width: 60px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+}
+
+.tile:focus {
+    outline: none;
+    background: #ddd;
+}
+
+.status {
+    margin-bottom: 10px;
+}
+
+.player-container {
+    width: 400px;
+    height: 40px;
+    margin: auto;
+    text-align: center;
+}
+
+.player-container div {
+    width: 50%;
+    float: left;
+}
+
+.piece {
+    height: 40px;
+    width: 40px;
+    margin: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.white {
+    background-color: rgb(255, 255, 255);
+    animation-duration: .5s;
+    animation-name: toWhite;
+    border-right: 2px solid #bbb;
+    border-bottom: 2px solid #bbb;
+}
+
+.black {
+    background-color: rgb(54, 54, 54);
+    animation-duration: .5s;
+    animation-name: toBlack;
+    border-right: 2px solid #eee;
+    border-bottom: 2px solid #eee;
+}
+
+@keyframes toBlack {
+    from {
+        background-color: rgb(255, 255, 255);
+    }
+    to {
+        background-color: rgb(54, 54, 54);
+    }
+}
+
+@keyframes toWhite {
+    from {
+        background-color: rgb(54, 54, 54);
+    }
+    to {
+        background-color: rgb(255, 255, 255);
+    }
+}
+
+.reset {
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    height: 30px;
+    width: 60px;
+}
+
+.reset:hover {
+    background-color: #286090;
+    border-color: #122b40;
+}
